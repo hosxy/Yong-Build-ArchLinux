@@ -8,8 +8,8 @@ pkgdesc="A Chinese Input Method"
 arch=('x86_64')
 url="https://github.com/dgod/yong"
 license=('GPL')
-depends=('gtk2' 'gtk3' 'pango')
-makedepends=('git' 'nodejs' 'gcc' 'gtk2' 'ibus' 'qt5-base' 'gtk3' 'libxkbcommon')
+depends=('gtk2' 'gtk3' 'qt5-base' 'pango')
+makedepends=('git' 'nodejs' 'gcc' 'ibus' 'libxkbcommon')
 source=('git+https://github.com/dgod/yong.git' 'git+https://github.com/dgod/build.js.git')
 sha512sums=('SKIP' 'SKIP')
 
