@@ -14,11 +14,13 @@ source=('git+https://github.com/dgod/yong.git' 'git+https://github.com/dgod/buil
 sha512sums=('SKIP' 'SKIP')
 
 pkgver() {
-    cd "$srcdir/$_pkgname/install"
-    awk '/%define +version/{print $3}' yong.spec | sed 's|-|.|g'
+    awk '/%define +version/{print $3}' $srcdir/$_pkgname/install/yong.spec | sed 's|-|.|g'
 }
 
 prepare(){
+    patch $srcdir/$_pkgname/im/qt5-im/build.txt < ../qt5-im-build.patch
+    patch $srcdir/$_pkgname/install/build.txt < ../yong-install.patch
+    
     cd $srcdir/$_pkgname
     mkdir -p {llib,cloud,gbk,mb,vim}/l64
     mkdir -p {im,config}/{l64-gtk3,l64-gtk2}
