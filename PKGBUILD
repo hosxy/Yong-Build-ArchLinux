@@ -1,7 +1,7 @@
 # Maintainer: xxxx <xxx@xxx.com>
 
 _pkgname=yong
-pkgname=${_pkgname}.git
+pkgname=${_pkgname}-git
 pkgver=2.5.0
 pkgrel=1
 pkgdesc="A Chinese Input Method"
