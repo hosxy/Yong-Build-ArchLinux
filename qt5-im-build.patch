@@ -1,0 +1,11 @@
+--- build.txt	2019-10-12 13:50:40.914414296 +0800
++++ build-archlinux.txt	2019-09-29 12:20:13.000000000 +0800
+@@ -19,7 +19,7 @@
+ env("QT_VER+="+QT_VER);
+ env("LIBS+=`pkg-config --libs Qt5Core Qt5Gui glib-2.0`");
+ env("LIBS+=-ldl -lstdc++");
+-var MOC=shell("pkg-config --variable=libdir Qt5Core")+'/qt5/bin/moc';
++var MOC=['/usr/bin/moc'];
+ var LIBDIR=shell("pkg-config --variable=libdir Qt5Core");
+ var INCDIR=shell("pkg-config --variable=includedir Qt5Core");
+ env("CFLAGS","+=",`-I${INCDIR}/QtCore/${QT_VER}`);
