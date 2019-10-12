@@ -1,0 +1,12 @@
+--- build.txt	2019-09-29 12:19:28.045941078 +0800
++++ build-archlinux.txt	2019-10-12 14:03:11.919840758 +0800
+@@ -68,6 +68,9 @@
+ 	copy_data();
+ 	copy_build("l32");
+ 	copy_build("l64");
++} else if(target=="copy64"){
++	copy_data();
++	copy_build("l64");
+ } else if(target=="dist"){
+ 	set_ver();
+ 	exec("7za a yong-lin-$(VER).7z yong");	
